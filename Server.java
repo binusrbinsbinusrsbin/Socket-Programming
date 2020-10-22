@@ -16,7 +16,7 @@ public class HW1Server {
                 new ServerSocket(portNumber);
 
 	    	while(true){
-				Socket clientSocket = serverSocket.accept();
+			Socket clientSocket = serverSocket.accept();
 	        	ClientWorker w=new ClientWorker(clientSocket);
 	        	Thread t=new Thread(w);
 	      		t.start();
